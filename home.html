@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>Rejsplanen</h1>
+    <p>
+        For at finde din rejse skal du skrive din lokation og destination ind i felterne for neden
+    </p>
+    <br />
+    <form method="get" onsubmit="GetResult(event)">
+        <p>Indtast lokation</p>
+        <input id="location" type="text" required />
+        <br />
+        <p>Indtast destination</p>
+        <input id="destination" type="text" required />
+        <br />
+        <button class="submit" type="submit">Find Rejse</button>
+    </form>
+    <div id="result" class="resultbox"></div>
+</body>
+</html>

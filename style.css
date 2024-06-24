@@ -1,0 +1,26 @@
+body{
+    position: absolute;
+    left: 30vw;
+    top: 10vh;
+    width: 40vw;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.submit{
+    border-radius: 10px;
+    border: 1px solid red;
+    width: 10vw;
+    height: 6vh;
+    background-color: green;
+    color: white;
+}
+
+.resultbox{
+    margin-left: 5vw;
+    width: 30vw;
+    height: auto;
+    border: 2px solid grey;
+    border-radius: 6px;
+}
