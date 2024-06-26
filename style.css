@@ -1,6 +1,7 @@
 body {
-    position: absolute;
+    position: sticky;
     background-image: url(train.jpg);
+    background-attachment: fixed;
 }
 
 .travelbox {
@@ -9,21 +10,33 @@ body {
     top: 10vh;
     width: 40vw;
     height: auto;
-    border: 2px solid black;
     border-radius: 10px;
-    background-color: white;
-    align-content: center;
+    background: linear-gradient(white, darkblue);
+    padding: 20px;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
 }
 
 .submit {
     border-radius: 10px;
-    border: 1px solid red;
+    border: 3px solid lightblue;
     width: 10vw;
     height: 6vh;
-    background-color: green;
+    background-color: darkred;
     color: white;
     position: relative;
-    left: 15vw;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .resultbox {
@@ -59,7 +72,7 @@ body {
     display: none;
     width: 100%;
     height: auto;
-    background-color: rgb(204, 204, 204);
+    background-color: white;
     color: black;
     text-align: center;
     border-radius: 5px;
@@ -67,16 +80,20 @@ body {
 }
 
 .inputfield {
-    position: relative;
-    left: 15vw;
+    font-size: 20px;
     background-color: white;
     color: black;
     border: 2px solid black;
     border-radius: 5px;
+    padding: 5px;
 }
 
 .locationtext {
-    position: relative;
-    left: 15vw;
+    font-size: 20px;
     color: black;
+    margin-bottom: 5px;
+}
+
+.shiftbox{
+
 }

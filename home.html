@@ -8,18 +8,22 @@
 
 <body>
     <div class="travelbox">
-        <h1>Rejsplanen</h1>
-        <p>
+        <h1 style="color: rgb(15, 99, 255); font-size: 44px;">Rejseplanen</h1>
+        <p style="font-size: 20px">
             For at finde din rejse skal du skrive din lokation og destination ind i felterne for neden
         </p>
         <br />
         <form method="get" onsubmit="GetResult(event)">
-            <p class="locationtext">Indtast lokation</p>
-            <input class="inputfield" id="location" type="text" required />
-            <br />
-            <p class="locationtext">Indtast destination</p>
-            <input class="inputfield" id="destination" type="text" required />
-            <br />
+            <div class="input-container">
+                <div class="input-group">
+                    <p class="locationtext">A</p>
+                    <input class="inputfield" id="location" type="text" placeholder="Fra" required />
+                </div>
+                <div class="input-group">
+                    <p class="locationtext">B</p>
+                    <input class="inputfield" id="destination" type="text" placeholder="Til" required />
+                </div>
+            </div>
             <button class="submit" type="submit">Find Rejse</button>
         </form>
         <div id="result" class="resultbox"></div>

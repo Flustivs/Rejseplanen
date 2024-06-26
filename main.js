@@ -67,7 +67,7 @@ function MakeTrips(tripsData) {
         if (Array.isArray(trip.Leg)) {
             trip.Leg.forEach(leg => {
                 let text = document.createElement('p');
-                text.innerHTML = `Tog/Bus/Til fods: ${leg.name} <br>
+                text.innerHTML = `${TravelType(leg)} <br>
                   Fra: ${leg.Origin.name} at ${leg.Origin.time} <br>
                   ${leg.Origin.track ? `Spor: ${leg.Origin.track} <br>` : ''}
                   Til: ${leg.Destination.name} at ${leg.Destination.time} <br>
@@ -76,7 +76,7 @@ function MakeTrips(tripsData) {
             });
         } else {
             let text = document.createElement('p');
-            text.innerHTML = `Tog/Bus/Til fods: ${trip.Leg.name} <br>
+            text.innerHTML = `${TravelType(trip.Leg)} <br>
                                       Fra: ${trip.Leg.Origin.name} at ${trip.Leg.Origin.time} <br>
                                       ${trip.Leg.Origin.track ? `Spor: ${trip.Leg.Origin.track} <br>` : ''}
                                       Til: ${trip.Leg.Destination.name} at ${trip.Leg.Destination.time}
@@ -97,9 +97,14 @@ function MakeTrips(tripsData) {
     });
 }
 // use to switch on the "Til fods/tog/bus"
-function TravelType(type){
-    switch (type){
-        case 
+function TravelType(leg){
+    switch(leg.type){
+        case "WALK":
+            return "Til fods";
+        case "BUS":
+            return "Bus: " + leg.line;
+        case "REG" || "LYN" || "IC":
+            return "Tog: " + leg.name;
     }
 }
 
