@@ -86,7 +86,7 @@ function MakeTrips(tripsData) {
 
         let detailbutton = document.createElement('button');
         detailbutton.className = "detailbutton";
-        detailbutton.onclick = toggleDetails;
+        detailbutton.onclick = ToggleDetails;
         detailbutton.innerHTML = "Detaljer";
 
         tripbox.appendChild(triptitle);
@@ -96,8 +96,14 @@ function MakeTrips(tripsData) {
         resultbox.style.visibility = "visible";
     });
 }
+// use to switch on the "Til fods/tog/bus"
+function TravelType(type){
+    switch (type){
+        case 
+    }
+}
 
-function toggleDetails(event) {
+function ToggleDetails(event) {
     let detailbox = event.target.nextElementSibling;
     detailbox.style.display = detailbox.style.display === "none" ? "block" : "none";
 }
